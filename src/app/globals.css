@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-base: #111213;
+  --color-accent: #D3AF5E;
+  --color-action: #D5FD51;
+  --color-surface: #1F2123;
+  --color-text: #FFFFFF;
+  --color-text-soft: #F0F0F0;
+  --font-playfair: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-base text-textSoft min-h-screen;
+  }
+}
+
+/* Safe area for bottom nav on notched devices */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Range slider - accent color */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-surface);
+  border-radius: 9999px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: none;
+}
