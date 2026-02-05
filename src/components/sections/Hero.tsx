@@ -15,22 +15,24 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-col items-center text-center">
         <motion.div
-          className="relative mb-12 flex h-32 w-32 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-accent/50 shadow-2xl ring-4 ring-base md:h-40 md:w-40"
+          className="relative mb-12 flex h-36 w-36 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-accent/50 shadow-2xl ring-4 ring-base md:h-44 md:w-44"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
         >
           {!imageError ? (
-            <Image
-              src="/carlos_profile.png"
-              alt="Carlos Ruano"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 128px, 160px"
-              priority
-              quality={85}
-              onError={() => setImageError(true)}
-            />
+            <div className="absolute inset-0">
+              <Image
+                src="/carlos_profile.png"
+                alt="Carlos Ruano"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 144px, 176px"
+                priority
+                quality={85}
+                onError={() => setImageError(true)}
+              />
+            </div>
           ) : (
             <span className="font-serif text-4xl font-semibold text-accent md:text-5xl">
               CR
@@ -45,6 +47,13 @@ export function Hero() {
         >
           Carlos Ruano
         </motion.h1>
+        <motion.p
+          className="mt-2 text-sm font-medium uppercase tracking-[0.35em] text-accent/90 md:text-base"
+          {...fadeUp}
+          transition={{ delay: 0.3, ...fadeUp.transition }}
+        >
+          MBA
+        </motion.p>
         <motion.div
           className="mt-8 flex items-center justify-center gap-6"
           {...fadeUp}

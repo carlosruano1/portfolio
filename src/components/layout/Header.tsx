@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   return (
@@ -13,6 +14,8 @@ export function Header() {
           <span className="text-white">Carlos</span>
           <span className="text-[#D3AF5E]">Ruano</span>
         </Link>
+        <div className="flex items-center gap-6">
+          <MobileMenu />
         <nav className="hidden items-center gap-6 md:flex">
           <Link href="/blog" className="text-sm text-textSoft hover:text-accent">
             Blog
@@ -31,6 +34,7 @@ export function Header() {
             Download
           </a>
         </nav>
+        </div>
       </div>
     </header>
   );

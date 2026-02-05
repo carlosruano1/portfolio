@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans, Italianno } from "next/font/google";
 import "./globals.css";
-import { BottomNav } from "@/components/layout/BottomNav";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
@@ -26,7 +25,7 @@ const italianno = Italianno({
 });
 
 export const metadata: Metadata = {
-  title: "Carlos Ruano | Wealth & Asset Management",
+  title: "Carlos Ruano | Portfolio",
   description: "Protecting and preserving wealth for discerning families and institutions.",
   icons: {
     icon: "/logo/favicon.png",
@@ -42,10 +41,9 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${dmSans.variable} ${italianno.variable}`}>
       <body className="font-sans">
         <Header />
-        <main className="pb-20 safe-bottom md:pb-0">{children}</main>
+        <main>{children}</main>
         <Footer />
         <ScrollToTop />
-        <BottomNav />
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import { fadeUp } from "@/lib/motion";
 const education = [
   {
     school: "University of North Carolina, Kenan-Flagler Business School",
+    url: "https://www.kenan-flagler.unc.edu/",
     location: "Chapel Hill, NC",
     degree: "Master of Business Administration, Full-Time MBA Program",
     date: "May 2025",
@@ -17,6 +18,7 @@ const education = [
   },
   {
     school: "St. Bonaventure University",
+    url: "https://www.sbu.edu/",
     location: "St. Bonaventure, NY",
     degree: "Bachelor's in Business Administration, Major in Finance",
     date: "May 2020",
@@ -30,6 +32,7 @@ const education = [
 const experience = [
   {
     company: "Integrated Wealth Management",
+    url: "https://www.integratedwm.com",
     location: "New Braunfels, TX",
     role: "Wealth Advisor",
     date: "June 2025 - January 2026",
@@ -41,6 +44,7 @@ const experience = [
   },
   {
     company: "Speedout Advisory",
+    url: "https://speedout.es",
     location: "Valencia, Spain",
     role: "Investment Banking Analyst",
     date: "2020-2023",
@@ -53,6 +57,7 @@ const experience = [
   },
   {
     company: "Ironside Asset Advisors",
+    url: "https://adviserinfo.sec.gov/firm/summary/161683",
     location: "Chapel Hill, NC",
     role: "Project for Investment Management Experiential Learning",
     date: "Spring 2024",
@@ -64,6 +69,7 @@ const experience = [
   },
   {
     company: "Students in Money Management (SIMM)",
+    url: "https://www.bonasimm.org/",
     location: "St. Bonaventure, NY",
     role: "Head of the International Sector",
     date: "2018-2020",
@@ -135,7 +141,20 @@ export function Credentials() {
               className="rounded-xl border border-surface bg-surface/50 px-5 py-5 md:px-6"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <p className="font-medium text-text">{ed.school}</p>
+                <p className="font-medium text-text">
+                  {ed.url ? (
+                    <a
+                      href={ed.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-accent/50 underline-offset-2 transition-colors hover:text-accent hover:decoration-accent"
+                    >
+                      {ed.school}
+                    </a>
+                  ) : (
+                    ed.school
+                  )}
+                </p>
                 <span className="text-sm text-textSoft/70">{ed.date}</span>
               </div>
               <p className="mt-0.5 text-sm text-textSoft/80">{ed.location}</p>
@@ -171,7 +190,20 @@ export function Credentials() {
               className="rounded-xl border border-surface bg-surface/50 px-5 py-5 md:px-6"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <p className="font-medium text-text">{exp.company}</p>
+                <p className="font-medium text-text">
+                  {exp.url ? (
+                    <a
+                      href={exp.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-accent/50 underline-offset-2 transition-colors hover:text-accent hover:decoration-accent"
+                    >
+                      {exp.company}
+                    </a>
+                  ) : (
+                    exp.company
+                  )}
+                </p>
                 <span className="text-sm text-textSoft/70">{exp.date}</span>
               </div>
               <p className="mt-0.5 text-sm text-textSoft/80">{exp.location}</p>

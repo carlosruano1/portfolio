@@ -1,93 +1,100 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const CELL_SIZE = 20;
-const MAX_DISTANCE = 320; // larger = glow reaches farther
-const GLOW_FALLOFF = 1.2; // lower = softer, more diffused falloff
-const AMBIENT = 0.06; // subtle base glow so it feels more spread/diffused
+const MAX_DISTANCE = 320;
+const GLOW_FALLOFF = 1.2;
+const AMBIENT = 0.06;
 
-// Accent #D3AF5E
 const ACCENT_R = 211;
 const ACCENT_G = 175;
 const ACCENT_B = 94;
 
-function buildEmptyGrid(cols: number, rows: number): number[][] {
-  return Array(rows)
-    .fill(null)
-    .map(() => Array(cols).fill(0));
-}
+// Base background #111213 – grid lines are this when not hovering
+const BASE_R = 17;
+const BASE_G = 18;
+const BASE_B = 19;
 
 export function InteractiveGrid() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mousePosRef = useRef({ x: 0, y: 0 });
-  const [size, setSize] = useState({ w: 0, h: 0 });
-  const cols = Math.ceil(size.w / CELL_SIZE) || 1;
-  const rows = Math.ceil(size.h / CELL_SIZE) || 1;
-  const [gridOpacity, setGridOpacity] = useState<number[][]>(() =>
-    buildEmptyGrid(cols, rows)
-  );
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const mouseRef = useRef({ x: -1000, y: -1000 });
+  const sizeRef = useRef({ w: 0, h: 0 });
 
-  // Resize: grid fills viewport so glow works everywhere
   useEffect(() => {
     const el = containerRef.current;
-    if (!el) return;
-    const updateSize = () => {
+    const canvas = canvasRef.current;
+    if (!el || !canvas) return;
+
+    const ctx = canvas.getContext("2d", { alpha: true });
+    if (!ctx) return;
+
+    const setSize = () => {
       const { width, height } = el.getBoundingClientRect();
-      setSize({ w: width, h: height });
+      const dpr = Math.min(window.devicePixelRatio ?? 1, 2);
+      sizeRef.current = { w: width, h: height };
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
-    updateSize();
-    const ro = new ResizeObserver(updateSize);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
 
-  // Rebuild grid when cols/rows change
-  useEffect(() => {
-    setGridOpacity(buildEmptyGrid(cols, rows));
-  }, [cols, rows]);
+    const updateMouse = (e: MouseEvent) => {
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      mouseRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    };
 
-  useEffect(() => {
-    const updateMousePos = (e: MouseEvent) => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        mousePosRef.current = {
-          x: e.clientX - rect.left,
-          y: e.clientY - rect.top,
-        };
+    let rafId = 0;
+    const draw = () => {
+      const { w, h } = sizeRef.current;
+      const cols = Math.ceil(w / CELL_SIZE) || 1;
+      const rows = Math.ceil(h / CELL_SIZE) || 1;
+      const mx = mouseRef.current.x;
+      const my = mouseRef.current.y;
+
+      ctx.clearRect(0, 0, w, h);
+
+      for (let rowIndex = 0; rowIndex < rows; rowIndex++) {
+        for (let colIndex = 0; colIndex < cols; colIndex++) {
+          const cellCenterX = colIndex * CELL_SIZE + CELL_SIZE / 2;
+          const cellCenterY = rowIndex * CELL_SIZE + CELL_SIZE / 2;
+          const distance = Math.hypot(mx - cellCenterX, my - cellCenterY);
+          const t = distance / MAX_DISTANCE;
+          const spot = Math.max(0, Math.pow(1 - Math.min(1, t), GLOW_FALLOFF));
+          const intensity = Math.min(1, AMBIENT + spot);
+
+          const x = colIndex * CELL_SIZE;
+          const y = rowIndex * CELL_SIZE;
+
+          ctx.fillStyle = `rgba(${ACCENT_R}, ${ACCENT_G}, ${ACCENT_B}, ${0.02 + intensity * 0.18})`;
+          ctx.fillRect(x, y, CELL_SIZE, CELL_SIZE);
+
+          // Grid lines: dark (background) by default, gold on hover
+          const r = BASE_R + (ACCENT_R - BASE_R) * intensity;
+          const g = BASE_G + (ACCENT_G - BASE_G) * intensity;
+          const b = BASE_B + (ACCENT_B - BASE_B) * intensity;
+          const lineAlpha = 0.25 + 0.75 * intensity;
+          ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${lineAlpha})`;
+          ctx.strokeRect(x, y, CELL_SIZE, CELL_SIZE);
+        }
       }
+
+      rafId = requestAnimationFrame(draw);
     };
 
-    const animate = () => {
-      setGridOpacity((prev) => {
-        const newOpacity = prev.map((row, rowIndex) =>
-          row.map((_, colIndex) => {
-            const cellCenterX = colIndex * CELL_SIZE + CELL_SIZE / 2;
-            const cellCenterY = rowIndex * CELL_SIZE + CELL_SIZE / 2;
-
-            const distance = Math.sqrt(
-              Math.pow(mousePosRef.current.x - cellCenterX, 2) +
-                Math.pow(mousePosRef.current.y - cellCenterY, 2)
-            );
-
-            const t = distance / MAX_DISTANCE;
-            const spot = Math.max(
-              0,
-              Math.pow(1 - Math.min(1, t), GLOW_FALLOFF)
-            );
-            return Math.min(1, AMBIENT + spot);
-          })
-        );
-        return newOpacity;
-      });
-      requestAnimationFrame(animate);
-    };
-
-    window.addEventListener("mousemove", updateMousePos);
-    animate();
+    setSize();
+    draw();
+    const ro = new ResizeObserver(setSize);
+    ro.observe(el);
+    window.addEventListener("mousemove", updateMouse);
 
     return () => {
-      window.removeEventListener("mousemove", updateMousePos);
+      cancelAnimationFrame(rafId);
+      ro.disconnect();
+      window.removeEventListener("mousemove", updateMouse);
     };
   }, []);
 
@@ -95,35 +102,12 @@ export function InteractiveGrid() {
     <div
       ref={containerRef}
       className="pointer-events-none absolute inset-0 overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-                         linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)`,
-        backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`,
-      }}
     >
-      <div className="absolute inset-0">
-        {gridOpacity.map((row, rowIndex) =>
-          row.map((intensity, colIndex) => (
-            <div
-              key={`${rowIndex}-${colIndex}`}
-              className="absolute border transition-opacity duration-150"
-              style={{
-                left: colIndex * CELL_SIZE,
-                top: rowIndex * CELL_SIZE,
-                width: CELL_SIZE,
-                height: CELL_SIZE,
-                opacity: intensity,
-                borderColor: `rgba(${ACCENT_R}, ${ACCENT_G}, ${ACCENT_B}, ${0.2 + intensity * 0.6})`,
-                backgroundColor: `rgba(${ACCENT_R}, ${ACCENT_G}, ${ACCENT_B}, ${0.02 + intensity * 0.18})`,
-                boxShadow:
-                  intensity > 0.1
-                    ? `inset 0 0 ${10 + intensity * 20}px rgba(${ACCENT_R}, ${ACCENT_G}, ${ACCENT_B}, ${0.12 + intensity * 0.3})`
-                    : "none",
-              }}
-            />
-          ))
-        )}
-      </div>
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 h-full w-full"
+        style={{ display: "block" }}
+      />
     </div>
-  )
+  );
 }

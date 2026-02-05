@@ -18,13 +18,22 @@
     @apply antialiased;
   }
   body {
-    @apply bg-base text-textSoft min-h-screen;
+    @apply bg-base text-textSoft min-h-screen flex flex-col;
   }
 }
 
 /* Safe area for bottom nav on notched devices */
 .safe-bottom {
   padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Hide scrollbar but keep scroll (carousel) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 /* Range slider - accent color */
