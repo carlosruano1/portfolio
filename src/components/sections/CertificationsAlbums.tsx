@@ -94,9 +94,16 @@ export function CertificationsAlbums() {
   };
 
   useEffect(() => {
-    const t = setInterval(goNext, AUTO_ADVANCE_MS);
+    const t = setInterval(() => {
+      setCurrentIndex((prev) => {
+        const next = (prev + 1) % certifications.length;
+        setSelectedId(certifications[next].id);
+        scrollToCenter(next);
+        return next;
+      });
+    }, AUTO_ADVANCE_MS);
     return () => clearInterval(t);
-  }, [currentIndex]);
+  }, []);
 
   useEffect(() => {
     // Center the first item on mount

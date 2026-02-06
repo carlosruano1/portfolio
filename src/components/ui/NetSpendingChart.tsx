@@ -24,10 +24,21 @@ const data = [
   { league: "Liga Portugal", expenditure: 59.48, income: 79.46 },
 ];
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+interface TooltipPayload {
+  dataKey: string;
+  value: number;
+}
+
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: TooltipPayload[];
+  label?: string;
+}
+
+const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
-    const expenditure = payload.find((p: any) => p.dataKey === 'expenditure')?.value || 0;
-    const income = payload.find((p: any) => p.dataKey === 'income')?.value || 0;
+    const expenditure = payload.find((p) => p.dataKey === 'expenditure')?.value || 0;
+    const income = payload.find((p) => p.dataKey === 'income')?.value || 0;
     const balance = income - expenditure;
 
     return (

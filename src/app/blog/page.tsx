@@ -37,7 +37,7 @@ export default function BlogPage() {
                   <span>8 min read</span>
                 </div>
                 <h2 className="font-serif text-2xl md:text-3xl font-semibold text-text group-hover:text-accent transition-colors">
-                  La Liga's crisis, the Premier League's dominance and the Americanization of football
+                  La Liga&apos;s crisis, the Premier League&apos;s dominance and the Americanization of football
                 </h2>
                 <p className="text-textSoft/80 leading-relaxed">
                   Spanish football faces an existential crisis: squeezed between the financial might of the Premier League and private equity, while digital disruption threatens from below.
@@ -75,10 +75,10 @@ export default function BlogPage() {
                   <span>8 min read</span>
                 </div>
                 <h2 className="font-serif text-2xl md:text-3xl font-semibold text-text group-hover:text-accent transition-colors">
-                  Why Being "Early" to the Party is the Fastest Way to Lose Money
+                  Why Being &quot;Early&quot; to the Party is the Fastest Way to Lose Money
                 </h2>
                 <p className="text-textSoft/80 leading-relaxed">
-                  Using historical data from 2000 to 2014, we analyzed the relationship between market valuations and actual returns. The results are a wake-up call for anyone investing in today's high-priced market.
+                  Using historical data from 2000 to 2014, we analyzed the relationship between market valuations and actual returns. The results are a wake-up call for anyone investing in today&apos;s high-priced market.
                 </p>
                 <div className="flex items-center gap-2 text-accent font-medium">
                   Read more

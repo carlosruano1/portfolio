@@ -35,7 +35,7 @@ export default function PricePenaltyBlog() {
           className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-text leading-tight mb-6"
           {...fadeUp}
         >
-          Why Being "Early" to the Party is the Fastest Way to Lose Money
+          Why Being &quot;Early&quot; to the Party is the Fastest Way to Lose Money
         </motion.h1>
 
         {/* Meta info */}
@@ -56,7 +56,7 @@ export default function PricePenaltyBlog() {
           transition={{ delay: 0.2, ...fadeUp.transition }}
         >
           <p className="text-xl md:text-2xl text-textSoft/90 leading-relaxed mb-8 font-light">
-            We have all heard the advice: <em className="text-accent font-normal">"Time in the market beats timing the market."</em>
+            We have all heard the advice: <em className="text-accent font-normal">&quot;Time in the market beats timing the market.&quot;</em>
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
@@ -64,7 +64,7 @@ export default function PricePenaltyBlog() {
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-12">
-            Using historical data from 2000 to 2014, we analyzed the relationship between market valuations (P/E Ratios) and the actual money investors took home ten years later. The results are a wake-up call for anyone investing in today's high-priced market.
+            Using historical data from 2000 to 2014, we analyzed the relationship between market valuations (P/E Ratios) and the actual money investors took home ten years later. The results are a wake-up call for anyone investing in today&apos;s high-priced market.
           </p>
         </motion.div>
 
@@ -75,16 +75,16 @@ export default function PricePenaltyBlog() {
           transition={{ delay: 0.3, ...fadeUp.transition }}
         >
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-accent mb-6">
-            The "Lost Decade" (2000–2010)
+            The &quot;Lost Decade&quot; (2000–2010)
           </h2>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-4">
-            In early 2000, the market was "expensive." P/E ratios were hovering around 28. Investors were optimistic, but the data tells a different story. If you bought in January 2000, your annualized return for the next ten years was{" "}
+            In early 2000, the market was &quot;expensive.&quot; P/E ratios were hovering around 28. Investors were optimistic, but the data tells a different story. If you bought in January 2000, your annualized return for the next ten years was{" "}
             <span className="text-red-400 font-semibold">-0.5%</span>.
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-12">
-            You didn't just wait a decade; you{" "}
+            You didn&apos;t just wait a decade; you{" "}
             <strong className="text-text">paid for the privilege of losing money</strong>.
           </p>
 
@@ -94,7 +94,7 @@ export default function PricePenaltyBlog() {
           </div>
 
           <p className="text-sm text-textSoft/60 italic leading-relaxed mb-12">
-            <strong className="text-textSoft/80 not-italic">Figure 1:</strong> This chart shows the "Price Penalty." Notice how as the P/E Ratio (horizontal axis) moves higher, the 10-Year Annualized Return (vertical axis) trends lower. The "sweet spot" for investors was clearly when P/E ratios stayed under 25. Source: Yahoo Finance data accessed via Python.<sup className="text-textSoft/40">(1)</sup>
+            <strong className="text-textSoft/80 not-italic">Figure 1:</strong> This chart shows the &quot;Price Penalty.&quot; Notice how as the P/E Ratio (horizontal axis) moves higher, the 10-Year Annualized Return (vertical axis) trends lower. The &quot;sweet spot&quot; for investors was clearly when P/E ratios stayed under 25. Source: Yahoo Finance data accessed via Python.<sup className="text-textSoft/40">(1)</sup>
           </p>
         </motion.section>
 
@@ -105,7 +105,7 @@ export default function PricePenaltyBlog() {
           transition={{ delay: 0.4, ...fadeUp.transition }}
         >
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-accent mb-6">
-            Where We Are Now: The "Danger Zone" of 2026
+            Where We Are Now: The &quot;Danger Zone&quot; of 2026
           </h2>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
@@ -113,7 +113,7 @@ export default function PricePenaltyBlog() {
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            As of February 2026, the S&P 500 is trading at a P/E ratio of approximately 27.7.<sup className="text-textSoft/40">(2)</sup> This places us firmly back in the "danger zone" that preceded the lost decade of the early 2000s.
+            As of February 2026, the S&amp;P 500 is trading at a P/E ratio of approximately 27.7.<sup className="text-textSoft/40">(2)</sup> This places us firmly back in the &quot;danger zone&quot; that preceded the lost decade of the early 2000s.
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-12">
@@ -121,7 +121,7 @@ export default function PricePenaltyBlog() {
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            The market today is distorted by the "Magnificent 7" (companies like Nvidia, Apple, and Microsoft). These seven tech giants now make up roughly 34% of the entire S&P 500 index.<sup className="text-textSoft/40">(3)</sup> When you buy a standard index fund, you aren't buying a diversified slice of the American economy. You are making a heavy bet on just seven expensive tech stocks, which are trading at an average P/E of roughly 31x.<sup className="text-textSoft/40">(4)</sup>
+            The market today is distorted by the &quot;Magnificent 7&quot; (companies like Nvidia, Apple, and Microsoft). These seven tech giants now make up roughly 34% of the entire S&amp;P 500 index.<sup className="text-textSoft/40">(3)</sup> When you buy a standard index fund, you aren&apos;t buying a diversified slice of the American economy. You are making a heavy bet on just seven expensive tech stocks, which are trading at an average P/E of roughly 31x.<sup className="text-textSoft/40">(4)</sup>
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-12">
@@ -155,10 +155,10 @@ export default function PricePenaltyBlog() {
 
             <div className="p-6 rounded-xl bg-accent/10 border border-accent/30">
               <h3 className="text-xl font-semibold text-accent mb-3">
-                Equal-Weight the S&P 500
+                Equal-Weight the S&amp;P 500
               </h3>
               <p className="text-textSoft/80 leading-relaxed">
-                Consider strategies that own all 500 companies equally. This reduces your exposure to the overpriced "Magnificent 7" and increases your stake in the reasonably priced "average" stock.
+                Consider strategies that own all 500 companies equally. This reduces your exposure to the overpriced &quot;Magnificent 7&quot; and increases your stake in the reasonably priced &quot;average&quot; stock.
               </p>
             </div>
           </div>
@@ -180,7 +180,7 @@ export default function PricePenaltyBlog() {
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-12">
-            When P/E ratios are high, your "margin of safety" disappears. The data proves that the higher the P/E ratio at the time of purchase, the lower the future rewards.
+            When P/E ratios are high, your &quot;margin of safety&quot; disappears. The data proves that the higher the P/E ratio at the time of purchase, the lower the future rewards.
           </p>
 
           {/* Advice Box */}
@@ -194,7 +194,7 @@ export default function PricePenaltyBlog() {
                 <div>
                   <strong className="text-text block mb-1">Check the Multiples</strong>
                   <span className="text-textSoft/80">
-                    Don't just look at the stock price; look at the P/E ratio.
+                    Don&apos;t just look at the stock price; look at the P/E ratio.
                   </span>
                 </div>
               </li>
@@ -210,9 +210,9 @@ export default function PricePenaltyBlog() {
               <li className="flex gap-4">
                 <span className="text-accent text-xl flex-shrink-0">✓</span>
                 <div>
-                  <strong className="text-text block mb-1">Don't Fear the Dip</strong>
+                  <strong className="text-text block mb-1">Don&apos;t Fear the Dip</strong>
                   <span className="text-textSoft/80">
-                    As we saw in 2003, the "crashes" are where the 8% returns are actually made.
+                    As we saw in 2003, the &quot;crashes&quot; are where the 8% returns are actually made.
                   </span>
                 </div>
               </li>
@@ -232,7 +232,7 @@ export default function PricePenaltyBlog() {
 
           <ol className="space-y-4 text-textSoft/80">
             <li>
-              Yahoo Finance. "S&P 500 Historical Data." Accessed February 5, 2026.{" "}
+              Yahoo Finance. &quot;S&amp;P 500 Historical Data.&quot; Accessed February 5, 2026.{" "}
               <a
                 href="https://finance.yahoo.com/quote/%5EGSPC/history"
                 className="text-accent hover:underline"
@@ -244,7 +244,7 @@ export default function PricePenaltyBlog() {
               .
             </li>
             <li>
-              Short, Doug. "P/E10 and Market Valuation: January 2026." Advisor Perspectives, February 3, 2026.{" "}
+              Short, Doug. &quot;P/E10 and Market Valuation: January 2026.&quot; Advisor Perspectives, February 3, 2026.{" "}
               <a
                 href="https://www.advisorperspectives.com/dshort/updates/2026/02/03/pe10-market-valuation-january-2026"
                 className="text-accent hover:underline"
@@ -256,7 +256,7 @@ export default function PricePenaltyBlog() {
               .
             </li>
             <li>
-              MacroMicro. "US - Magnificent Seven Total Market Cap & Share of S&P 500." Accessed February 5, 2026.{" "}
+              MacroMicro. &quot;US - Magnificent Seven Total Market Cap &amp; Share of S&amp;P 500.&quot; Accessed February 5, 2026.{" "}
               <a
                 href="https://en.macromicro.me/charts/123469/us-magnificent-seven-total-market-cap-and-share-of-sp-500"
                 className="text-accent hover:underline"
@@ -268,7 +268,7 @@ export default function PricePenaltyBlog() {
               .
             </li>
             <li>
-              Columbia Threadneedle Investments US. "The rise of the Magnificent 7: Concentration risk versus earnings power." Accessed February 5, 2026.{" "}
+              Columbia Threadneedle Investments US. &quot;The rise of the Magnificent 7: Concentration risk versus earnings power.&quot; Accessed February 5, 2026.{" "}
               <a
                 href="https://www.columbiathreadneedleus.com/insights/latest-insights/the-rise-of-the-magnificent-7-concentration-risk-versus-earnings-power"
                 className="text-accent hover:underline"
@@ -280,7 +280,7 @@ export default function PricePenaltyBlog() {
               .
             </li>
             <li>
-              Equiti. "Russell 2000 gains and 2026 Technical outlook." January 9, 2026.{" "}
+              Equiti. &quot;Russell 2000 gains and 2026 Technical outlook.&quot; January 9, 2026.{" "}
               <a
                 href="https://www.equiti.com/sc-en/news/trade-reviews/russell-2000-gains-and-2026-technical-outlook/"
                 className="text-accent hover:underline"
@@ -313,7 +313,7 @@ export default function PricePenaltyBlog() {
                 <span className="px-2 py-0.5 rounded-full bg-accent/20 text-accent text-xs font-medium">Latest</span>
               </div>
               <h4 className="font-serif text-xl md:text-2xl font-semibold text-text group-hover:text-accent transition-colors mb-2">
-                La Liga's crisis, the Premier League's dominance and the Americanization of football
+                La Liga&apos;s crisis, the Premier League&apos;s dominance and the Americanization of football
               </h4>
               <p className="text-textSoft/80 leading-relaxed text-sm">
                 Spanish football faces an existential crisis: squeezed between the financial might of the Premier League and private equity, while digital disruption threatens from below.

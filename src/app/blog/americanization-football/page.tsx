@@ -35,7 +35,7 @@ export default function AmericanizationFootballBlog() {
           className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-text leading-tight mb-6"
           {...fadeUp}
         >
-          La Liga's crisis, the Premier League's dominance and the Americanization of football
+          La Liga&apos;s crisis, the Premier League&apos;s dominance and the Americanization of football
         </motion.h1>
 
         {/* Meta info */}
@@ -56,11 +56,11 @@ export default function AmericanizationFootballBlog() {
           transition={{ delay: 0.2, ...fadeUp.transition }}
         >
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            The existential crisis facing European football didn't reveal itself in a boardroom in Madrid or a stock exchange in London. It happened on a grassroots training pitch in Texas last week.
+            The existential crisis facing European football didn&apos;t reveal itself in a boardroom in Madrid or a stock exchange in London. It happened on a grassroots training pitch in Texas last week.
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            When I asked a 10-year-old player to name his favorite team, the expectation was a standard answer: Real Madrid, Barcelona, or perhaps Manchester City. Instead, he looked up and replied, "I don't watch those. I watch the Kings League on Twitch."
+            When I asked a 10-year-old player to name his favorite team, the expectation was a standard answer: Real Madrid, Barcelona, or perhaps Manchester City. Instead, he looked up and replied, &quot;I don&apos;t watch those. I watch the Kings League on Twitch.&quot;
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
@@ -87,11 +87,11 @@ export default function AmericanizationFootballBlog() {
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            European football, conversely, is the Wild West. It is an open market where the terrifying prospect of relegation drives irrational spending. Premier League clubs operate like venture-backed startups, burning cash to capture market share and secure survival. Spanish clubs, however, find themselves in a different reality. Hamstrung by Javier Tebas's strict economic controls and Financial Fair Play (FFP) rigor, they act more like distressed assets desperately trying to service debt.
+            European football, conversely, is the Wild West. It is an open market where the terrifying prospect of relegation drives irrational spending. Premier League clubs operate like venture-backed startups, burning cash to capture market share and secure survival. Spanish clubs, however, find themselves in a different reality. Hamstrung by Javier Tebas&apos;s strict economic controls and Financial Fair Play (FFP) rigor, they act more like distressed assets desperately trying to service debt.
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-12">
-            The divergence has created a clear hierarchy: The Premier League has effectively become the "NFL of Europe" - a super-prime product vacuuming up global broadcasting revenue - while La Liga has faded into a regional competition anchored by two global brands, with the rest of the pyramid falling behind.
+            The divergence has created a clear hierarchy: The Premier League has effectively become the &quot;NFL of Europe&quot; - a super-prime product vacuuming up global broadcasting revenue - while La Liga has faded into a regional competition anchored by two global brands, with the rest of the pyramid falling behind.
           </p>
         </motion.section>
 
@@ -110,7 +110,7 @@ export default function AmericanizationFootballBlog() {
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            While the Premier League flexed its financial muscle, spending aggressively across the board, La Liga's activity was dormant. The numbers from Transfermarkt paint a stark picture of the new world order.
+            While the Premier League flexed its financial muscle, spending aggressively across the board, La Liga&apos;s activity was dormant. The numbers from Transfermarkt paint a stark picture of the new world order.
           </p>
 
           {/* Chart */}
@@ -124,15 +124,15 @@ export default function AmericanizationFootballBlog() {
 
           <div className="space-y-6">
             <p className="text-lg text-textSoft/80 leading-relaxed">
-              <strong className="text-red-400">The Premier League (-€164m Net Spend):</strong> English clubs continued their aggressive acquisition strategies. Crucially, this wasn't limited to the elite; relegation-threatened sides in England comfortably outspent teams playing in European competitions in Spain.
+              <strong className="text-red-400">The Premier League (-€164m Net Spend):</strong> English clubs continued their aggressive acquisition strategies. Crucially, this wasn&apos;t limited to the elite; relegation-threatened sides in England comfortably outspent teams playing in European competitions in Spain.
             </p>
 
             <p className="text-lg text-textSoft/80 leading-relaxed">
-              <strong className="text-orange-400">The MLS Shock (-€97m Net Spend):</strong> With the 2026 World Cup on the horizon, American franchises are investing heavily in on-field talent. That Major League Soccer outspent La Liga by such a margin is a damning indictment of the Spanish top flight's decline in purchasing power.
+              <strong className="text-orange-400">The MLS Shock (-€97m Net Spend):</strong> With the 2026 World Cup on the horizon, American franchises are investing heavily in on-field talent. That Major League Soccer outspent La Liga by such a margin is a damning indictment of the Spanish top flight&apos;s decline in purchasing power.
             </p>
 
             <p className="text-lg text-textSoft/80 leading-relaxed">
-              <strong className="text-green-400">La Liga (+€46m Net Profit):</strong> Spain was the only major league to record a significant "profit" in the window. While this appears responsible on a spreadsheet, in elite sports, a transfer surplus is often a sign of weakness. It signals a league that is selling its best assets—its talent—because it cannot afford to retain them.
+              <strong className="text-green-400">La Liga (+€46m Net Profit):</strong> Spain was the only major league to record a significant &quot;profit&quot; in the window. While this appears responsible on a spreadsheet, in elite sports, a transfer surplus is often a sign of weakness. It signals a league that is selling its best assets—its talent—because it cannot afford to retain them.
             </p>
           </div>
         </motion.section>
@@ -144,7 +144,7 @@ export default function AmericanizationFootballBlog() {
           transition={{ delay: 0.45, ...fadeUp.transition }}
         >
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-accent mb-6">
-            Enter the "Smart Money"
+            Enter the &quot;Smart Money&quot;
           </h2>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
@@ -152,7 +152,7 @@ export default function AmericanizationFootballBlog() {
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            The recent news of Apollo Sports Capital acquiring a majority stake in Atletico Madrid serves as the perfect case study.<sup className="text-textSoft/40">(1)</sup> Even a club of Atletico's stature can no longer compete with state-owned entities like Manchester City or PSG on revenue generation alone. They require institutional capital simply to remain relevant.
+            The recent news of Apollo Sports Capital acquiring a majority stake in Atletico Madrid serves as the perfect case study.<sup className="text-textSoft/40">(1)</sup> Even a club of Atletico&apos;s stature can no longer compete with state-owned entities like Manchester City or PSG on revenue generation alone. They require institutional capital simply to remain relevant.
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
@@ -200,7 +200,7 @@ export default function AmericanizationFootballBlog() {
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            The "amortization" strategy involves signing players to unusually long contracts—often seven or eight years—rather than the standard four or five. This spreads the accounting cost of a transfer fee over a longer period.
+            The &quot;amortization&quot; strategy involves signing players to unusually long contracts—often seven or eight years—rather than the standard four or five. This spreads the accounting cost of a transfer fee over a longer period.
           </p>
 
           <div className="bg-surface/50 p-6 rounded-lg mb-6">
@@ -214,7 +214,7 @@ export default function AmericanizationFootballBlog() {
           </div>
 
           <p className="text-lg text-textSoft/80 leading-relaxed">
-            This accounting lever allows clubs to sign a higher volume of talent immediately while kicking the financial can down the road. Spanish clubs, bound by La Liga's stricter domestic economic controls, do not have the flexibility to pull these levers.
+            This accounting lever allows clubs to sign a higher volume of talent immediately while kicking the financial can down the road. Spanish clubs, bound by La Liga&apos;s stricter domestic economic controls, do not have the flexibility to pull these levers.
           </p>
         </motion.section>
 
@@ -229,11 +229,11 @@ export default function AmericanizationFootballBlog() {
           </h2>
 
           <p className="text-lg text-textSoft/80 leading-relaxed mb-6">
-            As the sport marches toward the 2026 World Cup, the global "brand" of football has never been stronger. However, the attention span of the next generation of fans has never been shorter.
+            As the sport marches toward the 2026 World Cup, the global &quot;brand&quot; of football has never been stronger. However, the attention span of the next generation of fans has never been shorter.
           </p>
 
           <p className="text-lg text-textSoft/80 leading-relaxed">
-            La Liga finds itself squeezed from above by the sheer financial might of the Premier League and private equity, and from below by the attention-grabbing disruption of alternative media formats. Unless Spanish football adapts—by loosening its self-imposed financial handcuffs and embracing new waves of investment—it risks sliding permanently into the role of a premium "feeder league" for the English, the Americans, and the Saudis.
+            La Liga finds itself squeezed from above by the sheer financial might of the Premier League and private equity, and from below by the attention-grabbing disruption of alternative media formats. Unless Spanish football adapts—by loosening its self-imposed financial handcuffs and embracing new waves of investment—it risks sliding permanently into the role of a premium &quot;feeder league&quot; for the English, the Americans, and the Saudis.
           </p>
         </motion.section>
 
@@ -249,7 +249,7 @@ export default function AmericanizationFootballBlog() {
 
           <ol className="space-y-4 text-textSoft/80">
             <li>
-              Insider Sport. "Atletico Madrid celebrates new owner – but did Wanda miss out?" November 11, 2025.{" "}
+              Insider Sport. &quot;Atletico Madrid celebrates new owner – but did Wanda miss out?&quot; November 11, 2025.{" "}
               <a
                 href="https://insidersport.com/2025/11/11/atletico-madrid-celebrates-new-owner-but-did-wanda-miss-out/"
                 className="text-accent hover:underline"
@@ -261,7 +261,7 @@ export default function AmericanizationFootballBlog() {
               .
             </li>
             <li>
-              Deloitte Sports Business Group. "Deloitte Football Money League 2026." January 2026.{" "}
+              Deloitte Sports Business Group. &quot;Deloitte Football Money League 2026.&quot; January 2026.{" "}
               <a
                 href="https://www.deloitte.com/uk/en/services/consulting-financial/analysis/deloitte-football-money-league.html"
                 className="text-accent hover:underline"
@@ -273,10 +273,10 @@ export default function AmericanizationFootballBlog() {
               .
             </li>
             <li>
-              Transfermarkt. "Winter Transfers 2026 - Net Spending by Competition." Accessed February 6, 2026.
+              Transfermarkt. &quot;Winter Transfers 2026 - Net Spending by Competition.&quot; Accessed February 6, 2026.
             </li>
             <li>
-              The Athletic. "Chelsea, FFP and the 8-year contract loophole explained." June 2025.{" "}
+              The Athletic. &quot;Chelsea, FFP and the 8-year contract loophole explained.&quot; June 2025.{" "}
               <a
                 href="https://theathletic.com/football/chelsea-amortization-explained/"
                 className="text-accent hover:underline"
@@ -308,10 +308,10 @@ export default function AmericanizationFootballBlog() {
                 <span>8 min read</span>
               </div>
               <h4 className="font-serif text-xl md:text-2xl font-semibold text-text group-hover:text-accent transition-colors mb-2">
-                Why Being "Early" to the Party is the Fastest Way to Lose Money
+                Why Being &quot;Early&quot; to the Party is the Fastest Way to Lose Money
               </h4>
               <p className="text-textSoft/80 leading-relaxed text-sm">
-                Using historical data from 2000 to 2014, we analyzed the relationship between market valuations and actual returns. The results are a wake-up call for anyone investing in today's high-priced market.
+                Using historical data from 2000 to 2014, we analyzed the relationship between market valuations and actual returns. The results are a wake-up call for anyone investing in today&apos;s high-priced market.
               </p>
             </div>
           </Link>

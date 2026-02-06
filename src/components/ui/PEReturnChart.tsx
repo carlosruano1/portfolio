@@ -13,7 +13,20 @@ import {
 } from "recharts";
 import { peVsForwardReturnsData } from "@/data/pe-vs-forward-returns";
 
-const CustomTooltip = ({ active, payload }: any) => {
+interface TooltipPayload {
+  payload: {
+    Date?: string;
+    PE_Ratio: number;
+    Forward_10Y_Annualized_Return: number;
+  };
+}
+
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: TooltipPayload[];
+}
+
+const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     
