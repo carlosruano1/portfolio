@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/motion";
+import Link from "next/link";
 
 export default function BlogPage() {
   return (
@@ -21,20 +22,84 @@ export default function BlogPage() {
           Insights on wealth management, market analysis, and strategic thinking.
         </motion.p>
 
-        <motion.div
-          className="mt-16 flex min-h-[400px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md"
-          {...fadeUp}
-          transition={{ delay: 0.2, ...fadeUp.transition }}
-        >
-          <div className="text-center px-6">
-            <p className="font-serif text-3xl text-textSoft/60 md:text-4xl">
-              Working on some blogs...
-            </p>
-            <p className="mt-4 text-lg text-textSoft/50">
-              Check back soon for market insights and strategic analysis.
-            </p>
-          </div>
-        </motion.div>
+        {/* Blog Posts Grid */}
+        <div className="mt-16 space-y-8">
+          <motion.article
+            className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-8 hover:border-accent/30 transition-all duration-300"
+            {...fadeUp}
+            transition={{ delay: 0.2, ...fadeUp.transition }}
+          >
+            <Link href="/blog/americanization-football">
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-3 text-sm text-textSoft/60">
+                  <time>February 6, 2026</time>
+                  <span>•</span>
+                  <span>8 min read</span>
+                </div>
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-text group-hover:text-accent transition-colors">
+                  La Liga's crisis, the Premier League's dominance and the Americanization of football
+                </h2>
+                <p className="text-textSoft/80 leading-relaxed">
+                  Spanish football faces an existential crisis: squeezed between the financial might of the Premier League and private equity, while digital disruption threatens from below.
+                </p>
+                <div className="flex items-center gap-2 text-accent font-medium">
+                  Read more
+                  <svg
+                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </motion.article>
+
+          <motion.article
+            className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-8 hover:border-accent/30 transition-all duration-300"
+            {...fadeUp}
+            transition={{ delay: 0.3, ...fadeUp.transition }}
+          >
+            <Link href="/blog/price-penalty">
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-3 text-sm text-textSoft/60">
+                  <time>February 2026</time>
+                  <span>•</span>
+                  <span>8 min read</span>
+                </div>
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-text group-hover:text-accent transition-colors">
+                  Why Being "Early" to the Party is the Fastest Way to Lose Money
+                </h2>
+                <p className="text-textSoft/80 leading-relaxed">
+                  Using historical data from 2000 to 2014, we analyzed the relationship between market valuations and actual returns. The results are a wake-up call for anyone investing in today's high-priced market.
+                </p>
+                <div className="flex items-center gap-2 text-accent font-medium">
+                  Read more
+                  <svg
+                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </motion.article>
+        </div>
       </div>
     </div>
   );
