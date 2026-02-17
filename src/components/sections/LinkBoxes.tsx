@@ -16,6 +16,12 @@ const boxes = [
     description: "Professional qualifications",
     external: false,
   },
+  {
+    href: "/vision",
+    label: "Vision",
+    description: "Web design for financial advisories",
+    external: false,
+  },
 ];
 
 export function LinkBoxes() {
