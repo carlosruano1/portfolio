@@ -27,7 +27,7 @@ export default function VisionPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p>
-            Many financial advisory firms operate with websites that haven't
+            Many financial advisory firms operate with websites that haven&apos;t
             evolved with the digital age. These platforms often fail to reflect
             the sophistication and professionalism of the services they
             represent.
@@ -43,14 +43,14 @@ export default function VisionPage() {
           <p>
             This vision serves as a tangible proposal, showcasing how a refined
             user interface, intuitive navigation, and professional design can
-            elevate a firm's online identity. Rather than abstract promises, I
+            elevate a firm&apos;s online identity. Rather than abstract promises, I
             present concrete examples that speak directly to the value of
             modernization.
           </p>
 
           <p>
             Each project is approached with an understanding of the financial
-            services industry's unique requirements: trust, clarity,
+            services industry&apos;s unique requirements: trust, clarity,
             accessibility, and compliance. The result is a digital presence that
             aligns with the caliber of expertise these firms provide to their
             clients.
