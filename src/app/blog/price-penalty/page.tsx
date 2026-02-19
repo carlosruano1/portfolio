@@ -1,9 +1,14 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/motion";
 import Link from "next/link";
-import { PEReturnChart } from "@/components/ui/PEReturnChart";
+
+const PEReturnChart = dynamic(
+  () => import("@/components/ui/PEReturnChart").then((m) => m.PEReturnChart),
+  { ssr: false }
+);
 
 export default function PricePenaltyBlog() {
   return (

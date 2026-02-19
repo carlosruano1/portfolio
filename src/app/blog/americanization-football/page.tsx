@@ -1,9 +1,14 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/motion";
 import Link from "next/link";
-import { NetSpendingChart } from "@/components/ui/NetSpendingChart";
+
+const NetSpendingChart = dynamic(
+  () => import("@/components/ui/NetSpendingChart").then((m) => m.NetSpendingChart),
+  { ssr: false }
+);
 
 export default function AmericanizationFootballBlog() {
   return (

@@ -1,0 +1,33 @@
+# Robots.txt for Alamo Advisors LP
+# Optimized for AI crawlers (ChatGPT, Gemini, Perplexity, Claude)
+
+User-agent: *
+Allow: /
+
+# AI Crawlers - Explicitly Allow
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap Location
+Sitemap: https://alamoadvisors.com/sitemap.xml

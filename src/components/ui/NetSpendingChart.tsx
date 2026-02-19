@@ -72,7 +72,7 @@ const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
 export function NetSpendingChart() {
   return (
     <div className="w-full h-[650px] p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="100%" minHeight={650}>
         <BarChart
           data={data}
           margin={{
