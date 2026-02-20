@@ -29,19 +29,19 @@ export function BlogPreview() {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ delay: 0.1, duration: 0.4 }}
           >
-            <Link href="/blog/americanization-football">
+            <Link href="/blog/apple-ai-strategy">
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-sm text-textSoft/60">
                   <span className="px-2 py-0.5 rounded-full bg-accent/20 text-accent text-xs font-medium">Latest</span>
-                  <time>February 6, 2026</time>
+                  <time>February 20, 2026</time>
                   <span>•</span>
-                  <span>10 min read</span>
+                  <span>8 min read</span>
                 </div>
                 <h3 className="font-serif text-2xl md:text-3xl font-semibold text-text group-hover:text-accent transition-colors">
-                  La Liga&apos;s crisis, the Premier League&apos;s dominance and the Americanization of football
+                  Apple Might Win the AI Race by Not Doing Anything&hellip; Yet
                 </h3>
                 <p className="text-textSoft/80 leading-relaxed">
-                  Spanish football faces an existential crisis: squeezed between the financial might of the Premier League and private equity, while digital disruption threatens from below.
+                  While Big Tech spends hundreds of billions racing to build foundation models, Apple is spending a fraction of that&mdash;and may emerge as the biggest winner in AI by perfecting what others prove first.
                 </p>
                 <div className="flex items-center gap-2 text-accent font-medium">
                   Read more
@@ -71,18 +71,18 @@ export function BlogPreview() {
             viewport={{ once: true, margin: "-40px" }}
             transition={{ delay: 0.2, duration: 0.4 }}
           >
-            <Link href="/blog/price-penalty">
+            <Link href="/blog/americanization-football">
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-sm text-textSoft/60">
-                  <time>February 2026</time>
+                  <time>February 6, 2026</time>
                   <span>•</span>
-                  <span>8 min read</span>
+                  <span>10 min read</span>
                 </div>
                 <h3 className="font-serif text-2xl md:text-3xl font-semibold text-text group-hover:text-accent transition-colors">
-                  Why Being &quot;Early&quot; to the Party is the Fastest Way to Lose Money
+                  La Liga&apos;s crisis, the Premier League&apos;s dominance and the Americanization of football
                 </h3>
                 <p className="text-textSoft/80 leading-relaxed">
-                  Using historical data from 2000 to 2014, we analyzed the relationship between market valuations and actual returns. The results are a wake-up call for anyone investing in today&apos;s high-priced market.
+                  Spanish football faces an existential crisis: squeezed between the financial might of the Premier League and private equity, while digital disruption threatens from below.
                 </p>
                 <div className="flex items-center gap-2 text-accent font-medium">
                   Read more

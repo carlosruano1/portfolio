@@ -48,7 +48,8 @@ export function Hero() {
           Carlos Ruano
         </motion.h1>
         <motion.p
-          className="mt-2 text-sm font-medium uppercase tracking-[0.35em] text-accent/90 md:text-base"
+          className="mt-2 text-sm font-medium uppercase tracking-[0.35em] md:text-base"
+          style={{ color: "white" }}
           {...fadeUp}
           transition={{ delay: 0.3, ...fadeUp.transition }}
         >

@@ -309,22 +309,40 @@ export default function PricePenaltyBlog() {
             Read Other Articles
           </h3>
           
-          <Link href="/blog/americanization-football">
-            <div className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:border-accent/30 transition-all duration-300">
-              <div className="flex items-center gap-3 text-sm text-textSoft/60 mb-3">
-                <time>February 6, 2026</time>
-                <span>•</span>
-                <span>10 min read</span>
-                <span className="px-2 py-0.5 rounded-full bg-accent/20 text-accent text-xs font-medium">Latest</span>
+          <div className="space-y-4">
+            <Link href="/blog/apple-ai-strategy">
+              <div className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:border-accent/30 transition-all duration-300">
+                <div className="flex items-center gap-3 text-sm text-textSoft/60 mb-3">
+                  <time>February 20, 2026</time>
+                  <span>•</span>
+                  <span>8 min read</span>
+                  <span className="px-2 py-0.5 rounded-full bg-accent/20 text-accent text-xs font-medium">Latest</span>
+                </div>
+                <h4 className="font-serif text-xl md:text-2xl font-semibold text-text group-hover:text-accent transition-colors mb-2">
+                  Apple Might Win the AI Race by Not Doing Anything&hellip; Yet
+                </h4>
+                <p className="text-textSoft/80 leading-relaxed text-sm">
+                  While Big Tech spends hundreds of billions racing to build foundation models, Apple is spending a fraction of that&mdash;and may emerge as the biggest winner in AI by perfecting what others prove first.
+                </p>
               </div>
-              <h4 className="font-serif text-xl md:text-2xl font-semibold text-text group-hover:text-accent transition-colors mb-2">
-                La Liga&apos;s crisis, the Premier League&apos;s dominance and the Americanization of football
-              </h4>
-              <p className="text-textSoft/80 leading-relaxed text-sm">
-                Spanish football faces an existential crisis: squeezed between the financial might of the Premier League and private equity, while digital disruption threatens from below.
-              </p>
-            </div>
-          </Link>
+            </Link>
+
+            <Link href="/blog/americanization-football">
+              <div className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:border-accent/30 transition-all duration-300">
+                <div className="flex items-center gap-3 text-sm text-textSoft/60 mb-3">
+                  <time>February 6, 2026</time>
+                  <span>•</span>
+                  <span>10 min read</span>
+                </div>
+                <h4 className="font-serif text-xl md:text-2xl font-semibold text-text group-hover:text-accent transition-colors mb-2">
+                  La Liga&apos;s crisis, the Premier League&apos;s dominance and the Americanization of football
+                </h4>
+                <p className="text-textSoft/80 leading-relaxed text-sm">
+                  Spanish football faces an existential crisis: squeezed between the financial might of the Premier League and private equity, while digital disruption threatens from below.
+                </p>
+              </div>
+            </Link>
+          </div>
         </motion.section>
 
         {/* Footer CTA */}

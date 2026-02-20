@@ -305,21 +305,39 @@ export default function AmericanizationFootballBlog() {
             Read Other Articles
           </h3>
           
-          <Link href="/blog/price-penalty">
-            <div className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:border-accent/30 transition-all duration-300">
-              <div className="flex items-center gap-3 text-sm text-textSoft/60 mb-3">
-                <time>February 2026</time>
-                <span>•</span>
-                <span>8 min read</span>
+          <div className="space-y-4">
+            <Link href="/blog/apple-ai-strategy">
+              <div className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:border-accent/30 transition-all duration-300">
+                <div className="flex items-center gap-3 text-sm text-textSoft/60 mb-3">
+                  <time>February 20, 2026</time>
+                  <span>•</span>
+                  <span>8 min read</span>
+                </div>
+                <h4 className="font-serif text-xl md:text-2xl font-semibold text-text group-hover:text-accent transition-colors mb-2">
+                  Apple Might Win the AI Race by Not Doing Anything&hellip; Yet
+                </h4>
+                <p className="text-textSoft/80 leading-relaxed text-sm">
+                  While Big Tech spends hundreds of billions racing to build foundation models, Apple is spending a fraction of that&mdash;and may emerge as the biggest winner in AI by perfecting what others prove first.
+                </p>
               </div>
-              <h4 className="font-serif text-xl md:text-2xl font-semibold text-text group-hover:text-accent transition-colors mb-2">
-                Why Being &quot;Early&quot; to the Party is the Fastest Way to Lose Money
-              </h4>
-              <p className="text-textSoft/80 leading-relaxed text-sm">
-                Using historical data from 2000 to 2014, we analyzed the relationship between market valuations and actual returns. The results are a wake-up call for anyone investing in today&apos;s high-priced market.
-              </p>
-            </div>
-          </Link>
+            </Link>
+
+            <Link href="/blog/price-penalty">
+              <div className="group p-6 rounded-xl border border-white/10 bg-white/5 hover:border-accent/30 transition-all duration-300">
+                <div className="flex items-center gap-3 text-sm text-textSoft/60 mb-3">
+                  <time>February 2026</time>
+                  <span>•</span>
+                  <span>8 min read</span>
+                </div>
+                <h4 className="font-serif text-xl md:text-2xl font-semibold text-text group-hover:text-accent transition-colors mb-2">
+                  Why Being &quot;Early&quot; to the Party is the Fastest Way to Lose Money
+                </h4>
+                <p className="text-textSoft/80 leading-relaxed text-sm">
+                  Using historical data from 2000 to 2014, we analyzed the relationship between market valuations and actual returns. The results are a wake-up call for anyone investing in today&apos;s high-priced market.
+                </p>
+              </div>
+            </Link>
+          </div>
         </motion.section>
 
         {/* Footer CTA */}

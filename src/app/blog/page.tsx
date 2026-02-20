@@ -29,6 +29,39 @@ export default function BlogPage() {
             {...fadeUp}
             transition={{ delay: 0.2, ...fadeUp.transition }}
           >
+            <Link href="/blog/apple-ai-strategy">
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-3 text-sm text-textSoft/60">
+                  <time>February 20, 2026</time>
+                  <span>•</span>
+                  <span>8 min read</span>
+                </div>
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-text group-hover:text-accent transition-colors">
+                  Apple Might Win the AI Race by Not Doing Anything&hellip; Yet
+                </h2>
+                <p className="text-textSoft/80 leading-relaxed">
+                  While Big Tech spends hundreds of billions racing to build foundation models, Apple is spending a fraction of that&mdash;and may emerge as the biggest winner in AI by perfecting what others prove first.
+                </p>
+                <div className="flex items-center gap-2 text-accent font-medium">
+                  Read more
+                  <svg
+                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </motion.article>
+
+          <motion.article
+            className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-8 hover:border-accent/30 transition-all duration-300"
+            {...fadeUp}
+            transition={{ delay: 0.25, ...fadeUp.transition }}
+          >
             <Link href="/blog/americanization-football">
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-sm text-textSoft/60">
@@ -65,7 +98,7 @@ export default function BlogPage() {
           <motion.article
             className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-8 hover:border-accent/30 transition-all duration-300"
             {...fadeUp}
-            transition={{ delay: 0.3, ...fadeUp.transition }}
+            transition={{ delay: 0.35, ...fadeUp.transition }}
           >
             <Link href="/blog/price-penalty">
               <div className="flex flex-col gap-4">
